@@ -85,3 +85,101 @@ struct DeviceType {
 
 
 ```
+
+
+``` swift
+
+//
+//  View+DeviceSize.swift
+//  SleepWave
+//
+//  Created by paige on 2021/11/09.
+//
+
+import SwiftUI
+
+// iphone size break point
+// 568, 667, 736, 812, 844, 896, 926
+
+enum DeviceSize {
+    case extrasmall
+    case small
+    case medium
+    case large
+    case none
+}
+
+extension View {
+    
+    var currentDeviceSize: DeviceSize {
+        get {
+            switch screenHeight {
+            case 0...568:
+                return .extrasmall
+            case 569...736:
+                return .small
+            case 737...844:
+                return .medium
+            case 897...926:
+                return .large
+            default: return .none
+            }
+        }
+    }
+    
+    // ipod touch
+    var sizeBreakPoint1: CGFloat {
+        get {
+            return 568
+        }
+    }
+    
+    // iphone SE 2th
+    var sizeBreakPoint2: CGFloat {
+        get {
+            return 667
+        }
+    }
+    
+    // iphone 8 plus
+    var sizeBreakPoint3: CGFloat {
+        get {
+            return 736
+        }
+    }
+    
+    // iphone 12 mini
+    var sizeBreakPoint4: CGFloat {
+        get {
+            return 812
+        }
+    }
+    
+    // iphone 12 pro
+    var sizeBreakPoint5: CGFloat {
+        get {
+            return 844
+        }
+    }
+    
+    // iphone 11 pro max
+    var sizeBreakPoint6: CGFloat {
+        get {
+            return 896
+        }
+    }
+    
+    // iphone 12 pro max
+    var sizeBreakPoint7: CGFloat {
+        get {
+            return 926
+        }
+    }
+    
+}
+
+
+
+
+
+```
