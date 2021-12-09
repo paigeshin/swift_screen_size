@@ -1,5 +1,13 @@
 # swift_screen_size
 
+    SE1, => 568
+    SE2, => 667
+    XR, => 896
+    8 PLUS, => 736
+    13 MINI, => 812 
+    13 PRO, => 844
+    13 PRO MAX => 926
+
 
 ```swift
 
